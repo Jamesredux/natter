@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
- root 'application#hello'
+  get 'login', to: 'sessions#new'
+
+  root 'pages#home'
+
+  get 'pages/home'
+  get '/about', to: 'pages#about'
+
+
 end
