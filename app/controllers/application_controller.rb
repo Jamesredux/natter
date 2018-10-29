@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  attr_accessor :sign_in_user
 
-  def hello
-  	render html: "hello, world! let's natter"
-  end
+  include SessionsHelper
+
+
 end

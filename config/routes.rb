@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'login', to: 'sessions#new'
+  
 
-  root 'pages#home'
+  root 		'pages#home'
 
-  get 'pages/home'
-  get '/about', to: 'pages#about'
+  get 		'pages/home'
+  get 		'/about', 		to: 'pages#about'
 
-
+  get 		'login', 			to: 'sessions#new'
+  post		'login', 			to: 'sessions#create'
+  delete	'logout', 		to: 'sessions#destroy'
 end
