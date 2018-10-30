@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   
 
-  
-
   root 		'pages#home'
 
   get 		'pages/home'
@@ -12,4 +10,5 @@ Rails.application.routes.draw do
   delete	'logout', 		to: 'sessions#destroy'
 
   resources :users
+  resources :posts, only: [:new, :create, :index, :destroy]
 end
