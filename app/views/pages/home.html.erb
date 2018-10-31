@@ -1,9 +1,15 @@
+not sure this view is ever used now
+
 <% provide(:title, "Home") %>
 <div class="center jumbotron">
 <h1>Natter</h1>
-<p>
-  This is the home pages for natter app a list of posts will go here, with links to sign in and the about page.
-</p>
+
+  <div class="post-list">
+  	<ul class="posts">
+  		<%= render link_to "Posts", posts_path  %>
+  	</ul>
+  </div>
+
 </div>
 
 <%= link_to "Sign up", '#', class: "btn btn-lg btn-primary" %>

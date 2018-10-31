@@ -1,0 +1,10 @@
+post number  <%= post.id %>
+<li>
+	<%= post.title %>
+	<%= post.body %>
+	<% if logged_in? %>
+		Post made by user <%=  current_user.name %>
+	<% end %>		
+</li>
+
+
