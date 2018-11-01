@@ -72,8 +72,15 @@ p {
 /* footer */
 
 footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   margin-top: 45px;
   padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
   border-top: 1px solid #eaeaea;
   color: #777;
 }
@@ -98,4 +105,26 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+
+/* posts index   */
+
+
+.posts-index {
+
+}
+
+
+.posts {
+  list-style: none;
+  border: 2px double #969092;
+  margin: 5px; 
+  min-height: 80px;
+ /* background-color: #c2c7d1; */
+}
+
+.titleofpost {
+  padding: 2px;
+  background-color: #9a9ea5;
 }

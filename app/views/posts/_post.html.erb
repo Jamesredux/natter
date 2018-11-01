@@ -1,10 +1,14 @@
-post number  <%= post.id %>
-<li>
-	<%= post.title %>
-	<%= post.body %>
-	<% if logged_in? %>
-		Post made by user <%=  current_user.name %>
-	<% end %>		
-</li>
 
+<div class="posts">
+<li>
+	<div class="titleofpost"><%= post.title %>
+		<% if logged_in? %>
+		Post made by  <%=  link_to post_author.name,  post_author %>
+	<% end %>		
+	</div>
+	<%= post.body %>
+	
+	
+</li>
+</div>
 

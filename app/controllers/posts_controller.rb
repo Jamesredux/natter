@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page], :per_page => 5)
   end
 
   def create
@@ -28,6 +28,11 @@ class PostsController < ApplicationController
 
   def post_params
   	params.require(:post).permit(:title, :body)
+  end
+
+#need a method that returns the author of a post
+  def post_author
+    
   end
 
 end
