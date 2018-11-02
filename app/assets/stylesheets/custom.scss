@@ -30,9 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+  font-size: 2.5em;
+  
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -117,14 +117,29 @@ footer ul li {
 
 
 .posts {
-  list-style: none;
-  border: 2px double #969092;
-  margin: 5px; 
-  min-height: 80px;
- /* background-color: #c2c7d1; */
+  margin-top: 5px;
+ /* font-size: 1.2em;  */
+  border: 1px solid #dfe0e4;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px 10px 0 10px;
+  overflow: scroll;
+
+  p{
+    padding: 5px 5px 0 5px;
+  }
+
+} 
+
+.p-author {
+  border-top: 1px solid #dfe0e4;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4C4C4C;
 }
 
-.titleofpost {
-  padding: 2px;
-  background-color: #9a9ea5;
+
+.btn-primary {
+  margin-top: 10px;
 }

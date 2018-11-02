@@ -1,14 +1,18 @@
 
 <div class="posts">
-<li>
-	<div class="titleofpost"><%= post.title %>
-		<% if logged_in? %>
-		Post made by  <%=  link_to post_author.name,  post_author %>
-	<% end %>		
+
+<p><%= post.body %></p>
+<div class="p-author">
+	<p class="p-author">
+<% if logged_in? %>
+	<% post_author(post.user_id) %>
+		<span>This post is by:</span>
+			<%=  link_to @post_author.name, user_path(@post_author) %>
+		<% else %>
+		 Log in to view author.
+	<% end %>	
+</p>
 	</div>
-	<%= post.body %>
-	
-	
-</li>
+
 </div>
 

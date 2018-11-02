@@ -15,4 +15,16 @@ class ApplicationController < ActionController::Base
    end
   end
 
+  def admin_user
+
+   unless user_admin?
+     flash[:danger] = "Sorry guests can not make new posts"
+    redirect_to root_url
+   end 
+  end
+
+  def user_admin?
+    current_user.admin?
+  end
+
 end

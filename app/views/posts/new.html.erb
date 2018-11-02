@@ -7,10 +7,8 @@
 	<div class="col-md-6 col-md-offset-3">
 		<%= form_for(:post, url: posts_path) do |f| %>
 
-			<%= f.label :title %>
-			<%= f.text_field :title, class: 'form-control' %>
 
-			<%= f.label :body %>
+			<%= f.label :New_Post %>
 			<%= f.text_field :body, class: 'form-control' %>
 
 			<%= f.submit "Create Post", class: "btn btn-primary" %>

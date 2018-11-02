@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 	before_action :logged_in_user, only: [:new, :create]
+  before_action :admin_user, only: [:new, :create] #not working at present
+  #admin_user is in application controller
 
   def new
   	@post = Post.new
@@ -24,15 +26,18 @@ class PostsController < ApplicationController
   	
   end
 
+  
+
+
+
   private
 
   def post_params
-  	params.require(:post).permit(:title, :body)
+  	params.require(:post).permit(:body)
   end
 
-#need a method that returns the author of a post
-  def post_author
-    
-  end
 
+
+
+  
 end
