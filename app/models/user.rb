@@ -2,7 +2,7 @@ class User < ApplicationRecord
 
 
 	has_many :posts
-	attr_accessor :remember_token
+	attr_accessor :remember_token, :admin
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
 
@@ -35,6 +35,8 @@ class User < ApplicationRecord
 		return false if digest.nil?
 		BCrypt::Password.new(digest).is_password?(token)
 	end
+
+
 
 	private
 

@@ -11,6 +11,10 @@
 		<% else %>
 		 Log in to view author.
 	<% end %>	
+	<% if logged_in? && current_user.admin? %>
+		| <%= link_to "delete", post, method: :delete,
+																	data: { confirm: "Are you sure?" } %>
+		<% end %>															
 </p>
 	</div>
 
