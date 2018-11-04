@@ -30,6 +30,10 @@ module SessionsHelper
 		!current_user.nil?
 	end
 
+	def method_name
+		
+	end
+
 	
 
 	def log_out

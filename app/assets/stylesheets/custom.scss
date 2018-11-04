@@ -55,9 +55,10 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: #e2b1df;
+  font-size: 3em;
+  color: #aeafaf;
   text-transform: uppercase;
+  text-shadow: 1px 1px #717272;
 /*  letter-spacing: -1px;  */
   padding-top: 9px;
   font-weight: bold;
@@ -142,4 +143,11 @@ footer ul li {
 
 .btn-primary {
   margin-top: 10px;
+}
+
+
+.mylinks {
+  border: 1px solid #dfe0e4;
+  margin: 10px;
+  padding: 10px;
 }

@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def user_admin    
     unless current_user.admin?
-      flash[:danger] = "Guests can not create posts."
+      flash[:danger] = "ONLY ADMIN CAN DELETE POSTS."
       redirect_to root_url
     end  
   end
